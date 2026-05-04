@@ -86,9 +86,3 @@ static void	stack_add_front(t_stack *stack, t_num *node)
 		stack->size++;
 	}
 }
-
-// ra: rotate up
-stack->top = stack->top->next;
-
-// rra: rotate down
-stack->top = stack->top->prev;
