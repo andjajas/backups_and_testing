@@ -1,4 +1,4 @@
-#include "gnl_gemini.h"
+#include "gnl.h"
 #include <stdio.h>
 #include <fcntl.h>
 
