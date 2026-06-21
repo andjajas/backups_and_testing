@@ -6,7 +6,7 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/21 11:55:07 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/06/21 12:29:29 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/06/21 15:55:28 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ unsigned char	reverse_bits(unsigned char octet)
 	bits = 0;
 	while (i < 8)
 	{
-		if (octet & 1 << i)
-			bits = bits | 1 << (7 - i);
+		if (octet & (1 << i))
+			bits = bits | (1 << (7 - i));
 		i++;
 	}
 	return (bits);
@@ -32,14 +32,14 @@ void	print_bits(unsigned char octet)
 {
 	int	i;
 
-	i = 7;
-	while (i >= 0)
+	i = 8;
+	while (i > 0)
 	{
+		i--;
 		if (octet & 1 << i)
 			write(1, "1", 1);
 		else
 			write(1, "0", 1);
-		i--;
 	}
 }
 
