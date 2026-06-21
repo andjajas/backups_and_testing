@@ -6,7 +6,7 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/21 11:55:07 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/06/21 15:55:28 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/06/21 16:36:22 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,3 +78,8 @@ int	main(void)
 
 	return (0);
 }
+
+// unsigned char	swap_bits(unsigned char octet)
+// {
+// 	return (octet << 4 | octet >> 4);
+// }
