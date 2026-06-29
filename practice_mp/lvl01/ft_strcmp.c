@@ -1,54 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   wdmatch.c                                          :+:    :+:            */
+/*   ft_strcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/06/29 19:49:20 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/06/29 19:49:22 by andjajas      ########   odam.nl         */
+/*   Created: 2026/06/29 19:50:17 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/06/29 19:53:47 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	valid_argv(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
 	while (s1[i])
 	{
-		while (s2[j] != '\0' && s1[i] != s2[j])
-			j++;
-		if (s2[j] == '\0')
-			return (0);
+		if (s1[i] != s2[i])
+			break ;
 		i++;
-		j++;
 	}
-	return (1);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
-int	main(int argc, char **argv)
-{
-	int	j;
-
-	if (argc != 3)
-	{
-		write(1, "\n", 1);
-		return (0);
-	}
-	if (valid_argv(argv[1], argv[2]))
-	{
-		j = 0;
-		while (argv[1][j])
-		{
-			write(1, &argv[1][j], 1);
-			j++;
-		}
-	}
-	write(1, "\n", 1);
-	return (0);
-}
+// #include <stdio.h>
+//
+// int	main(void)
+// {
+// 	char	*s1 = "";
+// 	char	*s2 = "abcdeg";
+// 	int		x = 0;
+//
+// 	x = my_strcmp(s2, s1);
+// 	printf("%d", x);
+// 	return (0);
+// }
